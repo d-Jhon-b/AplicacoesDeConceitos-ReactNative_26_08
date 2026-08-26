@@ -1,12 +1,13 @@
-import { StyleSheet } from 'react-native';
-import { Text, View } from '@/components/Themed';
+import { StyleSheet,Text, View } from 'react-native';
 import Pai from '../src/Pai'
+import React, {useState} from 'react';
+// import Filho from '../src/Filho';
 
 export default function TabOneScreen() {
   return (
     <View  style={styles.container}>
       <View style={styles.box}>
-        <Pai/>
+        <Pai   />
       </View>
 
 

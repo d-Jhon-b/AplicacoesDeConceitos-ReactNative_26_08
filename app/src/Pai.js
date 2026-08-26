@@ -1,19 +1,29 @@
-import React from 'react'
+import React, { useState } from "react";
+import { Text } from "react-native"
+import Estilo from './Estilo'
 import Filho from './Filho'
 
+export default Comp => {
+    const [num, setNum] = useState(0)
+    const [content, setContent]=useState('')
 
-export default CompPai=>{
-    let x=20 
-    let y=100
 
+    function ExibirValor(GerarNumero, text) {
+        console.warn(GerarNumero)
+        setNum(GerarNumero)
+        setContent(text)
+    }
     return (
-
         <>
-
-        <Filho a={x} b={y} />
-        <Filho a={x+100} b={y*10} />
-
+            <Text style={Estilo.fontGrande}>{`${content}:\n${num}`}</Text>
+            <Filho
+                min={1}
+                max={100}
+                funcao={ExibirValor}
+            />
         </>
     )
-
 }
+
+
+ 
